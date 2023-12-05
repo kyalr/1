@@ -3,6 +3,7 @@
       "javascript",
       "javascriptreact",
       "typescript"
-    ]
+    ],
+    "azureAutomation.directory.basePath": "c:\\Users\\kyler"
   }
   
