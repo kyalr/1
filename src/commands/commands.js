@@ -14,7 +14,7 @@ function onItemSendHandler(event) {
     .then((uniqueDomains) => {
       // Display the email domains of the recipients as a comma-separated string.
       let domainsString = Array.from(uniqueDomains).join("\n");
-      
+
       event.completed({
         allowEvent: false,
         cancelLabel: "Don't Send",
@@ -23,6 +23,11 @@ function onItemSendHandler(event) {
         errorMessage: domainsString,
         sendModeOverride: Office.MailboxEnums.SendModeOverride.PromptUser,
       });
+
+      // Add a 3-minute delay before sending the email (without actual email sending code)
+      setTimeout(() => {
+        console.log("Email sending delayed by 3 minutes");
+      }, 3 * 60 * 1000); // 3 minutes in milliseconds
     })
     .catch((error) => {
       console.error(error);
