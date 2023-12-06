@@ -3,5 +3,6 @@
 Office.onReady((info) => {
     if (info.host === Office.HostType.Outlook) {
       document.getElementById("app-body").style.display = "flex";
+      
     }
   });
