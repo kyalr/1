@@ -22,12 +22,10 @@ function onItemSendHandler(event) {
         contextData: JSON.stringify({ a: "aValue", b: "bValue" }),
         errorMessage: domainsString,
         sendModeOverride: Office.MailboxEnums.SendModeOverride.PromptUser,
-      });
+      }) 
     })
-    .catch((error) => {
-      console.error(error);
-    });
 }
+
 
 async function getAllRecipients() {
   return new Promise((resolve, reject) => {
